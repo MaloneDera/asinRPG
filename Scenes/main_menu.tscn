@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://2yvq6yiiep7y"]
+
+[ext_resource type="Texture2D" uid="uid://c3sryc6ptswwi" path="res://Menu/InShot_20260902_042756904.jpg.jpeg" id="1_28flt"]
+
+[node name="MainMenu" type="Control" unique_id=1062644086]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 421.0
+offset_bottom = 251.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=139800565]
+visible = false
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 646.0
+color = Color(0.21176471, 0, 0.45882353, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1208619131]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 218.0
+offset_right = 635.0
+offset_bottom = 413.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1468542695]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.006
+anchor_top = -0.007
+anchor_right = -0.006
+anchor_bottom = -0.007
+offset_left = -0.62199974
+offset_top = 0.2510004
+offset_right = 1156.378
+offset_bottom = 657.251
+texture = ExtResource("1_28flt")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=66344634]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 311.0
+offset_right = 662.0
+offset_bottom = 506.0
+
+[node name="Title" type="Label" parent="TextureRect/VBoxContainer" unique_id=2094967992]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "AsinRPG"
+
+[node name="Start" type="Button" parent="TextureRect/VBoxContainer" unique_id=1775966671]
+layout_mode = 2
+text = "Start Game"
+
+[node name="Options" type="Button" parent="TextureRect/VBoxContainer" unique_id=1775383366]
+layout_mode = 2
+text = "Options"
+
+[node name="Credits" type="Button" parent="TextureRect/VBoxContainer" unique_id=365150538]
+layout_mode = 2
+text = "Credits"
+
+[node name="Quit" type="Button" parent="TextureRect/VBoxContainer" unique_id=1819619554]
+layout_mode = 2
+text = "Quit"

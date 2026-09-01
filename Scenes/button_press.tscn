@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ddhneuh0wj5fq"]
+
+[ext_resource type="Script" uid="uid://r616hrx5cc4m" path="res://Scripts/ButtonPress.cs" id="1_3wi7q"]
+
+[node name="ButtonPress" type="Node2D" unique_id=762489881]
+script = ExtResource("1_3wi7q")
