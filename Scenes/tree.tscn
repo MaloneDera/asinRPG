@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://duf43pgsb8y3c"]
+
+[ext_resource type="Texture2D" uid="uid://bfxts3vkg1w7h" path="res://Graphics/SingleSprites/Gemini_Generated_Image_61e7dh61e7dh61e7-Photoroom.png" id="1_0vwjc"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uj04i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5viw"]
+size = Vector2(104.39805, 145.04706)
+
+[node name="Tree" type="Node2D" unique_id=1919559937]
+scale = Vector2(0.18199573, 0.22135416)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1421137293]
+texture = ExtResource("1_0vwjc")
+offset = Vector2(0, -170.415)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=402009661]
+physics_material_override = SubResource("PhysicsMaterial_uj04i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=443300142]
+position = Vector2(5.494634, 85.8353)
+shape = SubResource("RectangleShape2D_p5viw")

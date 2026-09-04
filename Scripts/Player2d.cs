@@ -4,17 +4,27 @@ using System.Formats.Tar;
 
 public partial class Player2d : CharacterBody2D
 {
+    [Export] public float MaxHealth {get; set;} = 100.0f;
+    [Export] public float CurrentHealth {get; set;} = 100.0f;
+    [Export] public float DamagePower {get; set;} = 25.0f;
     [Export] public float Speed {get; set;} = 100.0f;
     [Export] public AnimatedSprite2D Sprite {get; set;}
-
+    [Export] public Area2D AttackArea {get; set;}
+    [Export] public Area2D HitArea {get; set;}
+    private bool _isDead = false;
     private string _facing = "down";
     private bool _isAttacking = false;
     public override void _Ready()
     {
+        CurrentHealth = MaxHealth;
         GD.Print("Player Loaded");
         if(Sprite != null)
         {
             Sprite.AnimationFinished += () =>  _isAttacking = false;
+        }
+        if (AttackArea != null)
+        {
+            AttackArea.AreaEntered += OnAttackAreaEntered;
         }
     }
 
@@ -51,4 +61,8 @@ public partial class Player2d : CharacterBody2D
     }
 
 
+private void OnAttackAreaEntered(Node2D body)
+    {
+
+    }
 }

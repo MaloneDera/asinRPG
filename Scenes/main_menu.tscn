@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://2yvq6yiiep7y"]
 
-[ext_resource type="Texture2D" uid="uid://c3sryc6ptswwi" path="res://Menu/InShot_20260902_042756904.jpg.jpeg" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://c3sryc6ptswwi" path="res://Graphics/Menu/InShot_20260902_042756904.jpg.jpeg" id="1_28flt"]
+[ext_resource type="Script" uid="uid://bobiojdrbskk3" path="res://Scripts/MainMenu.cs" id="1_48xlc"]
 
-[node name="MainMenu" type="Control" unique_id=1062644086]
+[node name="MainMenu" type="Control" unique_id=1062644086 node_paths=PackedStringArray("StartButton", "OptionsButton", "QuitButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,6 +14,10 @@ offset_right = 421.0
 offset_bottom = 251.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_48xlc")
+StartButton = NodePath("TextureRect/VBoxContainer/Start")
+OptionsButton = NodePath("TextureRect/VBoxContainer/Options")
+QuitButton = NodePath("TextureRect/VBoxContainer/Quit")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=139800565]
 visible = false
@@ -37,8 +42,8 @@ anchor_right = -0.006
 anchor_bottom = -0.007
 offset_left = -0.62199974
 offset_top = 0.2510004
-offset_right = 1156.378
-offset_bottom = 657.251
+offset_right = 1150.378
+offset_bottom = 650.251
 texture = ExtResource("1_28flt")
 expand_mode = 1
 

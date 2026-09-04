@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dh3ipr5jywkn8"]
+
+[sub_resource type="TileSet" id="TileSet_uj04i"]
+
+[node name="Kheroni" type="Node2D" unique_id=2003396259]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1385159991]
+tile_set = SubResource("TileSet_uj04i")

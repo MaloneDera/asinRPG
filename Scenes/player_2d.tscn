@@ -753,6 +753,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_uj04i"]
+radius = 13.0
+
 [node name="Player2D" type="CharacterBody2D" unique_id=211414679 node_paths=PackedStringArray("Sprite")]
 script = ExtResource("1_jxdfa")
 Sprite = NodePath("AnimatedSprite2D")
@@ -761,7 +764,7 @@ Sprite = NodePath("AnimatedSprite2D")
 shape = SubResource("CapsuleShape2D_7x6r0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1136283269]
-position = Vector2(1, -10)
+position = Vector2(-3, -8)
 sprite_frames = SubResource("SpriteFrames_fw8h8")
 animation = &"attack_right"
 frame = 7
@@ -769,5 +772,10 @@ frame_progress = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=842522968]
 zoom = Vector2(2.5, 2.5)
+
+[node name="AttackArea" type="Area2D" parent="." unique_id=1472721512]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=990693793]
+shape = SubResource("CircleShape2D_uj04i")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
